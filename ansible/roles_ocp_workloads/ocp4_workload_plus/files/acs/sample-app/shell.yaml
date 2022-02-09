@@ -5,8 +5,8 @@ metadata:
     app: shellshock
     team: test-team
   annotations:
-    argocd.argoproj.io/hook: Sync    
-    argocd.argoproj.io/sync-wave: "4"      
+    argocd.argoproj.io/hook: Sync
+    argocd.argoproj.io/sync-wave: "4"
   name: shell
   namespace: stackrox-sample-app
 spec:
@@ -43,9 +43,9 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
+  - protocol: TCP
+    port: 80
+    targetPort: 80
   selector:
     app: shellshock
 ---
@@ -62,4 +62,4 @@ spec:
     name: shellshock
     weight: 100
   port:
-    targetPort: 80    
+    targetPort: 80
